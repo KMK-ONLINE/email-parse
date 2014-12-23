@@ -660,6 +660,7 @@ class Parse {
                 $emailAddress['original_address'] .= $curChar;
                 if ($curChar == ')')
                 {
+                    if (!isset($commentNestLevel)) $commentNestLevel = 0;
                     $commentNestLevel--;
                     if ($commentNestLevel <= 0)
                     {
